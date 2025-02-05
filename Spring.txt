@@ -1,0 +1,143 @@
+다운로드 >
+
+https://spring.io/
+
+https://spring.io/projects/spring-framework (탭에서 projects - Spring Tools 4)
+
+https://github.com/spring-attic/toolsuite-distribution/wiki/Spring-Tool-Suite-3
+
+
+Spring Tool Suite 3.9.18 - https://download.springsource.com/release/STS/3.9.18.RELEASE/dist/e4.21/spring-tool-suite-3.9.18.RELEASE-e4.21.0-win32-x86_64.zip
+
+
+2.
+압축 풀기 - sts-bundle - sts-3.9.18~ - STS - 바탕화면에 바로가기 만들기
+
+3. 
+plugins, content 압축 풀기 
+
+content 폴더의 content 복사 - Browse - NCS - workspace(spring) 만들기 -   - 실행   
+오류 나는 창 OK 누르기 - File(New) -  Spring Legacy Project
+
+content 폴더 - '.metadata' 폴더
+
+
+----
+
+sts 다운 후 압축 풀기 - '.sts' 이름 변경 - sts 폴더 안의 ,sts 복사 - D 드라이브 - NCS 폴더 - workpace(sptring) '.metadata' 폴더에 복붙 
+
+
+plugins 폴더 복붙 후 metadata - plugins 폴더에 붙여넣기 
+
+window - preferences - enc 검색 - workspace - UTF-8 인지 확인 
+맨위 파일 세모 - Sptring Legacy 클릭 - 끝
+
+
+----
+JDK 11 설치
+
+https://www.oracle.com/kr/java/technologies/javase/jdk11-archive-downloads.html
+- Java SE Development Kit 11.0.24
+- Windows x64 Installer
+
+Sts- ~ boundlw - ini - 메모장 
+
+---
+
+-startup
+plugins/org.eclipse.equinox.launcher_1.6.300.v20210813-1054.jar
+--launcher.library
+plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.300.v20210828-0802
+-product
+org.springsource.sts.ide
+--launcher.defaultAction
+openFile
+-vm
+C:\Program Files\Java\jdk-11\javaw.exe
+-vmargs
+-Dosgi.requiredJavaVersion=11
+-Dosgi.dataAreaRequiresExplicitInit=true
+-Xms256m
+-Xmx2048m
+--add-modules=ALL-SYSTEM
+-Dosgi.module.lock.timeout=10
+
+
+
+-- 수정--
+
+
+BuildPath - Library 11 로 바꾸기
+
+롬복 라이브러리 다운
+
+https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.36
+
+
+
+- https://mybatis.org/mybatis-3/ 
+- 매퍼 설정
+
+- <!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+-member.xml 파일에 붙여넣기
+
+
+
+
+
+
+
+
+
+<20250205>
+
+첨부파일 업로드 
+
+1.
+https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.36
+접속
+2.
+commons-fileupload 검색
+
+3. Apache Commons FileUpload 클릭 (1.5.version)
+
+4. 복사 후, pom.xml 파일에 붙여넣기
+
+5. commons-io 검색 후 , Apache Commons IO 클릭, (2.1.ver) 복사
+
+
+resources 에 폴더를 생성 해서  사진, css 등 자원들을 넣는 곳
+
+root-context.xml에 들어가서 파일업로드 관련 설정 작업 실시
+ex)
+
+	<!-- 파일 업로드 관련 설정 작업 -->
+	<bean id="multipartResolver"
+	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	
+	
+	<property name="maxInMemorySize" value="10485760" />  <!-- 10MB -->
+	<property name="defaultEncoding" value="UTF-8" />
+
+
+
+src/main/java - com.spring.fileupload 패키지 - UploadController 클래스 만들기
+
+
+@Controller 추가
+Upload 클래스 만들고 , @Autowired, @RequestMapping("upload.go") 삽입
+
+
+
+
+AOP
+
+https://mvnrepository.com/ 
+
+aspectjweaver 검색 - AspectJ Weaver - 1.9.97 - pom.xml  에 붙여넣기
+
+13_AOP 에 file 생성
+
