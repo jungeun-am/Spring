@@ -1,0 +1,13 @@
+스프링 부트
+
+1. 사이트 접속
+https://spring.io/
+
+2. Projects - SpringTools for Eclipse
+
+3. 4.28.0 windows x96_64 버전
+
+--
+4. 저장 및 실행
+
+D드라이브 - NCS - download에 붙여 넣기 - 알집 풀기
